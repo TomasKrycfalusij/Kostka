@@ -2,7 +2,8 @@ let Kostka = 0
 let A = 0
 let Typ = 6
 let Player = 1
-if (input.buttonIsPressed(Button.B)) {
+input.onButtonPressed(Button.B, function number_of_players() {
+    let Player: number;
     if (Player == 1) {
         Player = 2
         basic.showString("2P")
@@ -15,9 +16,9 @@ if (input.buttonIsPressed(Button.B)) {
         basic.clearScreen()
     }
     
-}
-
-if (input.buttonIsPressed(Button.AB)) {
+})
+input.onLogoEvent(TouchButtonEvent.Pressed, function number_of_sides() {
+    let Typ: number;
     if (Typ == 6) {
         basic.showNumber(10)
         basic.pause(300)
@@ -30,8 +31,7 @@ if (input.buttonIsPressed(Button.AB)) {
         Typ = 6
     }
     
-}
-
+})
 if (input.logoIsPressed()) {
     A = 1
     basic.showNumber(1)

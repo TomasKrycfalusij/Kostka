@@ -1,8 +1,18 @@
+let A: number;
 let Kostka = 0
-let A = 0
+let Key = 0
 let Typ = 6
 let Player = 1
-input.onButtonPressed(Button.B, function number_of_players() {
+input.onButtonPressed(Button.B, function less_sides() {
+    
+})
+input.onButtonPressed(Button.A, function more_sides() {
+    
+})
+input.onLogoEvent(TouchButtonEvent.Pressed, function give_key() {
+    
+})
+function number_of_players() {
     let Player: number;
     if (Player == 1) {
         Player = 2
@@ -16,22 +26,8 @@ input.onButtonPressed(Button.B, function number_of_players() {
         basic.clearScreen()
     }
     
-})
-input.onLogoEvent(TouchButtonEvent.Pressed, function number_of_sides() {
-    let Typ: number;
-    if (Typ == 6) {
-        basic.showNumber(10)
-        basic.pause(300)
-        basic.clearScreen()
-        Typ = 10
-    } else {
-        basic.showNumber(6)
-        basic.pause(300)
-        basic.clearScreen()
-        Typ = 6
-    }
-    
-})
+}
+
 if (input.logoIsPressed()) {
     A = 1
     basic.showNumber(1)

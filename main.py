@@ -1,9 +1,10 @@
 Kostka = 0
-A = 0
+Key = 0
 Typ = 6
 Player = 1
-input.on_button_pressed(Button.B, number_of_players)
-input.on_logo_event(TouchButtonEvent.PRESSED, number_of_sides)
+input.on_button_pressed(Button.B, less_sides)
+input.on_button_pressed(Button.A, more_sides)
+input.on_logo_event(TouchButtonEvent.PRESSED, give_key)
 
 def number_of_players():
     if Player == 1:
@@ -16,17 +17,14 @@ def number_of_players():
         basic.show_string("1P")
         basic.pause(500)
         basic.clear_screen()
-def number_of_sides():
-    if Typ == 6:
-        basic.show_number(10)
-        basic.pause(300)
-        basic.clear_screen()
-        Typ = 10
-    else:
-        basic.show_number(6)
-        basic.pause(300)
-        basic.clear_screen()
-        Typ = 6
+
+def more_sides():
+    pass
+def less_sides():
+    pass
+def give_key():
+    pass
+
 if input.logo_is_pressed():
     A = 1
     basic.show_number(1)

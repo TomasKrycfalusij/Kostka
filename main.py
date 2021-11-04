@@ -30,7 +30,10 @@ if input.logo_is_pressed():
     basic.show_number(1)
     basic.pause(500)
     basic.clear_screen()
-if input.is_gesture(Gesture.SHAKE):
+
+input.on_gesture(Gesture.SHAKE, shake)
+
+def shake():
     if A == 1 or A == 2:
         Kostka = randint(1, Typ)
         basic.pause(100)

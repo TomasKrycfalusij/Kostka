@@ -35,7 +35,9 @@ if (input.logoIsPressed()) {
     basic.clearScreen()
 }
 
-if (input.isGesture(Gesture.Shake)) {
+input.onGesture(Gesture.Shake, function shake() {
+    let Kostka: number;
+    let A: number;
     if (A == 1 || A == 2) {
         Kostka = randint(1, Typ)
         basic.pause(100)
@@ -109,5 +111,4 @@ if (input.isGesture(Gesture.Shake)) {
         
     }
     
-}
-
+})
